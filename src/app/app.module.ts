@@ -9,6 +9,7 @@ import { InputAreaComponent } from './recipe-check/input-area/input-area.compone
 import { ResultAreaComponent } from './recipe-check/result-area/result-area.component';
 import { AboutComponent } from './about/about/about.component';
 import { FormsModule } from '@angular/forms';
+import { FooterComponent } from './footer/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FormsModule } from '@angular/forms';
     RecipeCheckComponent,
     InputAreaComponent,
     ResultAreaComponent,
-    AboutComponent
+    AboutComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
