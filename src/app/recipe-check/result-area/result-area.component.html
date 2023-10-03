@@ -1,9 +1,8 @@
 <ul class="list-group">
-    <li class="list-group-item fs-6">Цибуля - 100 гр</li>
-    <li class="list-group-item fs-6">Буряк - 100 гр</li>
-    <li class="list-group-item fs-6">Цибуля - 100 гр</li>
-    <li class="list-group-item fs-6">Буряк - 100 гр</li>
-    <li class="list-group-item fs-6">Цибуля - 100 гр</li>
-    <li class="list-group-item fs-6">Буряк - 100 гр</li>
+    <li class="list-group-item fs-6"
+    *ngFor="let ingridient of ingridients">
+  {{ingridient[0]}} - {{ingridient[1]}}
+  </li>
+   
    
   </ul>

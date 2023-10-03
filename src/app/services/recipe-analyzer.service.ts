@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, EventEmitter } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
@@ -11,6 +11,7 @@ export class RecipeAnalyzerService {
     'ковбаса',
     'горілка'
   ];
+  ingridientsWereUpdated = new EventEmitter<string>();
   constructor() { }
 
   getRecipe(recipeText: string) {
@@ -74,8 +75,9 @@ uniqIngrNames.forEach((c) => {
  uniqIngrNamesWeights.push([c, weightsum])
                               })    
 
-console.log(uniqIngrNamesWeights)
+//console.log(uniqIngrNamesWeights)
 this.ingridients = uniqIngrNamesWeights;
+this.ingridientsWereUpdated.emit('Ingridients were updated!');
 
   }
 
