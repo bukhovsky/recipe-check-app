@@ -29,11 +29,11 @@ export class RecipeAnalyzerService {
     const uniqIngrNames = []
     const uniqIngrNamesWeights = []
    
-    //search for lines with " гр."
+    //search for lines with " гр." or " шт"
     for(let i = 0; i < arrayOfLines.length; i++) 
     {
         
-        const x = arrayOfLines[i].match(/^.+ +\d+ +гр.*$/)
+        const x = arrayOfLines[i].match(/^.+ +\d+ +шт.*$/)
         if ( x != null) {
     arrayOfIngr.push(arrayOfLines[i])
         }
@@ -42,8 +42,8 @@ export class RecipeAnalyzerService {
 //create arrey of ingridiet names
 for(let y = 0; y < arrayOfIngr.length; y++) {
 
-  const weightStart = arrayOfIngr[y].search(/\d+ +гр/)   
-  const weightEnd = arrayOfIngr[y].search(/\d +гр/) + 1 
+  const weightStart = arrayOfIngr[y].search(/\d+ +шт/)   
+  const weightEnd = arrayOfIngr[y].search(/\d +шт/) + 1 
   const ingrName = arrayOfIngr[y].slice(0, weightStart - 1)
   const ingrWeight = Number(arrayOfIngr[y].slice(weightStart, weightEnd))
   
