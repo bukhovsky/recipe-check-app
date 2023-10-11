@@ -8,6 +8,7 @@ import { RecipeAnalyzerService } from 'src/app/services/recipe-analyzer.service'
 })
 export class ResultAreaComponent {
   ingridients = [];
+  ingridientsWithUnits = [];
   constructor(
     private analyzer: RecipeAnalyzerService
   ){
@@ -15,6 +16,7 @@ export class ResultAreaComponent {
       (status: string) => {
         //console.log(status);
         this.ingridients = this.analyzer.ingridients;
+        this.ingridientsWithUnits = this.analyzer.ingridientsWithUnits; 
       }
     )
   }

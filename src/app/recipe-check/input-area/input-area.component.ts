@@ -16,5 +16,6 @@ export class InputAreaComponent {
 
  onInput(){
     this.analyzer.calculateIngridients(this.inputedText);
+    this.analyzer.calculateIngridientsUnits(this.inputedText);
   }
 }

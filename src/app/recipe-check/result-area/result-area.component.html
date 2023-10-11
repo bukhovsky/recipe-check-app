@@ -1,8 +1,16 @@
 <ul class="list-group">
     <li class="list-group-item fs-6"
     *ngFor="let ingridient of ingridients">
-  {{ingridient[0]}} - {{ingridient[1]}} гр
+  {{ingridient[0]}} {{ingridient[1]}} гр
   </li>
    
+   
+  </ul>
+<ul class="list-group">
+    <li class="list-group-item fs-6"
+    *ngFor="let ingridientsWithUnit of ingridientsWithUnits">
+  {{ingridientsWithUnit[0]}} - {{ingridientsWithUnit[1]}} шт
+  </li>
+
    
   </ul>
